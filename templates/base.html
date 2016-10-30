@@ -43,7 +43,9 @@ fjs.parentNode.insertBefore(js, fjs);
         <li class='pull-right'><a href='{% url "login" %}'>Login</a></li>
         {% else %}
         <li class='pull-right'><a href='{% url "logout" %}'>Logout</a></li>
-        <!-- <li><a href='{% url "posts:create" %}'>Create</a></li> -->
+        <li class='pull-right'><a href='{% url "posts:create" %}'>Create</a></li>
+        {% block post_form_link %}
+        {% endblock %}
         {% endif %}
     </ol>
 {% block content %}{% endblock content %}
